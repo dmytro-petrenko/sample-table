@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useState, useRef } from 'react';
 import styles from './dropdown_menu.module.scss';
 import DropdownIcon from '../icons/DropdownIcon';
+import useClickOutside from '../../hooks/useClickOutside';
 
 interface IDropdown {
   statusComplete: boolean;
@@ -21,6 +22,10 @@ const Dropdown: FC<IDropdown> = ({
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const drobdownRef = useRef(null);
+
+  useClickOutside(drobdownRef, () => setIsOpen(false));
+
   const checkboxHandler = (status: string): void => {
     if (status.toLowerCase() === 'complete') {
       selectCompleteHandler(!statusComplete);
@@ -32,7 +37,7 @@ const Dropdown: FC<IDropdown> = ({
   };
 
   return (
-    <div className={styles.block}>
+    <div ref={drobdownRef} className={styles.block}>
       <div className={styles.tabContainer} onClick={() => setIsOpen(!isOpen)}>
         <p>Status</p>
         <DropdownIcon />
