@@ -1,0 +1,18 @@
+.headerContainer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.2fr 1.2fr 1.2fr;
+  grid-template-rows: 20px;
+  grid-column-gap: 20px;
+  width: 800px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.headerItem {
+  height: fit-content;
+  font-family: 'Mulish';
+  font-weight: 600;
+  font-size: 16px;
+}
+.dateItem {
+  text-align: center;
+}

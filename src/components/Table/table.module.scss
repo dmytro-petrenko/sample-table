@@ -1,0 +1,32 @@
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 800px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.2fr 1.2fr 1.2fr;
+  grid-template-rows: 40px;
+  grid-column-gap: 20px;
+  width: 800px;
+  &:nth-child(1) {
+    margin-top: 10px; 
+  }
+  // padding: 10px 0;
+}
+.rowElement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Mulish';
+  font-weight: 400;
+  font-size: 16px;
+  text-align: start;
+}
+.cell {
+  text-align: center;
+  margin: 0 auto;
+}
+

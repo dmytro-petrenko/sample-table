@@ -1,0 +1,54 @@
+.block {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  p {
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+    margin-right: 5px;
+  }
+}
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px 10px;
+  list-style: none;
+  margin: 15px 0 0 0;
+  li {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    label {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: 'Mulish';
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      input[type='checkbox'] {
+        margin-right: 10px;
+      }
+    }
+  }
+}
